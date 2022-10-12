@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>Jethro's Library</h1>
+        </div>
+        <button id="newBook">New book +</button>
+    </div>
+    <div id="modal" class="main modal">
+        <div class="main-mid modal-content">
+            <span class="close">&times;</span>
+            <form id="inputForm" class="inputForm">
+                <label class="input">Add A New Book</label>
+                <br>
+                <span><label for="bookName">Book:</label>
+                <input id="bookName" type="text"></span>
+                <br>
+                <span><label for="author">Author:</label>
+                <input id="author" type="text"></span>
+                <br>
+                <span><label for="pages">How many pages?</label>
+                <input id="pages" type="number"></span>
+                <br>
+                <span><label for="isRead">Have you read it?</label>
+                <input name="read" for="isRead" type="radio">
+                <label for="isRead">Yes</label>
+                <input name="read" type="radio" id="isRead">
+                <label for="isRead">No</label></span>
+                <br>
+                <button id="submit" type="submit">Submit</button>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
