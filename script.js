@@ -3,6 +3,7 @@ const main = document.getElementById("main")
 const newbtn = document.getElementById("newBook");
 const modal = document.getElementById("modal")
 const closebtn = document.getElementsByClassName("close")[0]
+const submit = document.getElementById("submit")
 //form inputs
 const bookTitle = document.getElementById("bookName")
 const bookAuthor = document.getElementById("author")
@@ -53,9 +54,18 @@ for (let i = 0; i < library.length; i++){
     box.appendChild(p4)
     box.appendChild(togglebtn)
     box.appendChild(removebtn)
-
-    
 }
+}
+
+
+//submit adds a book to myLibrary function
+submit.onclick = function (){
+    let title = bookTitle.textContent;
+    let author = bookAuthor.textContent;
+    let pages = bookPages.textContent;
+    let read = bookIsRead.textContent;
+    let newBook = createBook(title, author, pages, read);
+    myLibrary.push(newBook)
 }
 
 
