@@ -77,21 +77,28 @@ form {
 
 .box {
     display: grid;
-    grid-template-rows: 4fr;
-    grid-template-columns: 1fr;
-    /* height: 75%; */
-    width: 50%;
+    grid-template-rows: 5fr;
+    grid-template-columns: 2fr;
+    height: 100%;
+    width: 75%;
     background-color: aliceblue;
     color: black;
     font-size: 20px;
 }
 
 .remove {
-
+    background-color: red;
+    /* height: 30px;
+    width: 70px; */
+    font-size: 80%;
 }
 
 .toggle {
-
+    display: grid;
+    grid-column-start: 1;
+    /* height: 30px;
+    width: 70px; */
+    font-size: 80%;
 }
 
 #main {
