@@ -57,7 +57,6 @@ for (let i = 0; i < library.length; i++){
 }
 }
 
-
 //submit adds a book to myLibrary function
 submit.onclick = function (){
     let title = bookTitle.textContent;
@@ -67,6 +66,10 @@ submit.onclick = function (){
     let newBook = createBook(title, author, pages, read);
     myLibrary.push(newBook)
 }
+//TODO make remove button work, first add indexes to every card
+// removebtn.onclick = function () {
+
+// }
 
 
 //Modal stuff
