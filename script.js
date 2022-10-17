@@ -11,10 +11,14 @@ const bookPages = document.getElementById("pages")
 const bookIsRead = document.getElementById("isRead")
 
 
-let myLibrary = [{title: "test book1", author: "testauthor1", pages: 10, isRead: "yes"},
+let myLibrary = [{title: "test book1", author: "testauthor1", pages: 10, isRead: "yes"}];
+/* 
+,
 {title: "test book1", author: "testauthor1", pages: 10, isRead: "yes"},
 {title: "test book1", author: "testauthor1", pages: 10, isRead: "yes"},
-{title: "test book1", author: "testauthor1", pages: 10, isRead: "yes"},];
+{title: "test book1", author: "testauthor1", pages: 10, isRead: "yes"}
+*/
+
 
 function createBook (title, author, nrPages, isRead) {
     this.title = title;
@@ -32,6 +36,7 @@ function createBook (title, author, nrPages, isRead) {
 function displayBooks(library){
 for (let i = 0; i < library.length; i++){
     let box = document.createElement("div");
+    box.setAttribute('id', `${i}`);
     let removebtn = document.createElement("button");
     let togglebtn = document.createElement("button");
     removebtn.innerHTML = "Remove";
@@ -64,13 +69,19 @@ submit.onclick = function (){
     let pages = bookPages.textContent;
     let read = bookIsRead.textContent;
     let newBook = createBook(title, author, pages, read);
-    myLibrary.push(newBook)
+    myLibrary.push(newBook);
+    displayBooks(myLibrary);
 }
 //TODO make remove button work, first add indexes to every card
 // removebtn.onclick = function () {
 
 // }
 
+
+//Toggle read button 
+// togglebtn.onclick = function () {
+
+// }
 
 //Modal stuff
 window.onclick = function (e) {
